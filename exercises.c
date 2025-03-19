@@ -49,7 +49,7 @@ List* crea_lista() {
       int *elemento = (int*)malloc(sizeof(int));
       if(elemento==NULL) return EXIT_FAILURE;
       *elemento=i;
-      pushFront(L,elemento);
+      pushBack(L,elemento);
    }
    return L;
 }
