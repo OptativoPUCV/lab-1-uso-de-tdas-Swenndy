@@ -2,3 +2,17 @@ Wed, Mar 19, 2025  8:43:54 AM:
  tests:  0|5
 total_score: 0/70
 3f6cb15
+Wed, Mar 19, 2025  9:00:24 AM: 
+ exercises.c | 18 +++++++++++++++++-
+ 1 file changed, 17 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'crea_lista':
+exercises.c:50:7: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+       if(elemento=NULL) return EXIT_FAILURE;
+       ^~
+exercises.c:50:32: error: return makes pointer from integer without a cast [-Werror=int-conversion]
+       if(elemento=NULL) return EXIT_FAILURE;
+                                ^~~~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+4f7a293
