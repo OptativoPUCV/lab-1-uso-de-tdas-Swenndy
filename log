@@ -16,3 +16,14 @@ exercises.c:50:32: error: return makes pointer from integer without a cast [-Wer
 cc1.exe: all warnings being treated as errors
 Compilation failed
 4f7a293
+Wed, Mar 19, 2025  9:01:09 AM: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'crea_lista':
+exercises.c:50:33: error: return makes pointer from integer without a cast [-Werror=int-conversion]
+       if(elemento==NULL) return EXIT_FAILURE;
+                                 ^~~~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+03c3a06
