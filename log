@@ -49,3 +49,9 @@ exercises.c:50:33: error: return makes pointer from integer without a cast [-Wer
 cc1.exe: all warnings being treated as errors
 Compilation failed
 1523aa3
+Wed, Mar 19, 2025  9:13:53 AM: 
+ exercises.c | 11 ++---------
+ 1 file changed, 2 insertions(+), 9 deletions(-)
+ tests:  1|4
+total_score: 10/70
+f8d9a24

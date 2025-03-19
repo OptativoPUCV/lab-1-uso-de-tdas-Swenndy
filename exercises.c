@@ -47,10 +47,10 @@ List* crea_lista() {
    for (int i=1; i <= 10; i++)
    {
       int *elemento = (int*)malloc(sizeof(int));
-      if(elemento==NULL) return EXIT_FAILURE;
-      *elemento=i;
+      *(elemento)=i;
       pushBack(L,elemento);
    }
+
    return L;
 }
 
@@ -60,14 +60,7 @@ Crea una función que reciba una lista de enteros (int*) y
 retorne la suma de sus elementos.
 */
 int sumaLista(List *L) {
-   int suma = 0;
-
-   void *num = first(L);
-   while (num!=NULL)
-   {
-      popFront(L);
-   }
-   
+   int suma = 0;   
    return suma;
 }
 
