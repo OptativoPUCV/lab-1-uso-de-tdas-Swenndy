@@ -129,3 +129,13 @@ void* next(List *L);
 2 errors generated.
 Compilation failed
 36f31e4
+Wed Mar 19 22:51:26 -03 2025: 
+ exercises.c | 7 ++-----
+ 1 file changed, 2 insertions(+), 5 deletions(-)
+In file included from test.c:5:
+./exercises.c:141:25: error: multi-character character constant [-Werror,-Wmultichar]
+   for (int k = 0; k != '/0'; k++)
+                        ^
+1 error generated.
+Compilation failed
+b3aa1f5

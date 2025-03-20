@@ -138,16 +138,13 @@ int parentesisBalanceados(char *cadena)
 {
    int Pizquierda = 0;
    int Pderecha = 0;
-   char *elemento = first(cadena);
-   while (elemento != NULL)
+   for (int k = 0; k != '/0'; k++)
    {
-      if (*elemento == '(')
+      if (cadena[k] == '(')
          Pizquierda++;
       else
          Pderecha++;
-      elemento = next(cadena);
    }
-
    if (Pizquierda == Pderecha)
       return 1;
    return 0;
