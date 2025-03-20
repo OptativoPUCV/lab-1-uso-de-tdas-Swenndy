@@ -97,3 +97,9 @@ Wed Mar 19 22:11:34 -03 2025:
  tests:  2|3
 total_score: 20/70
 96bd5bf
+Wed Mar 19 22:26:31 -03 2025: 
+ exercises.c | 37 +++++++++++++++++++++++++++----------
+ 1 file changed, 27 insertions(+), 10 deletions(-)
+ tests:  3|2
+total_score: 40/70
+0cc53a2
