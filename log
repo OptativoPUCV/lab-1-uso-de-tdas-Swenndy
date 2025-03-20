@@ -109,3 +109,23 @@ Wed Mar 19 22:40:11 -03 2025:
  tests:  4|1
 total_score: 50/70
 f6f246f
+Wed Mar 19 22:48:00 -03 2025: 
+ exercises.c | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+In file included from test.c:5:
+./exercises.c:141:27: error: incompatible pointer types passing 'char *' to parameter of type 'List *' (aka 'struct List *') [-Werror,-Wincompatible-pointer-types]
+   char *elemento = first(cadena);
+                          ^~~~~~
+./arraylist.h:10:19: note: passing argument to parameter 'L' here
+void* first(List *L);
+                  ^
+In file included from test.c:5:
+./exercises.c:148:23: error: incompatible pointer types passing 'char *' to parameter of type 'List *' (aka 'struct List *') [-Werror,-Wincompatible-pointer-types]
+      elemento = next(cadena);
+                      ^~~~~~
+./arraylist.h:14:18: note: passing argument to parameter 'L' here
+void* next(List *L);
+                 ^
+2 errors generated.
+Compilation failed
+36f31e4
