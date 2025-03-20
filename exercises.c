@@ -140,9 +140,9 @@ int parentesisBalanceados(char *cadena)
    int Pderecha = 0;
    for (int k = 0; cadena[k] != '\0'; k++)
    {
-      if (cadena[k] == '(')
+      if (cadena[k] == '(' || cadena[k] == '{' || cadena[k] == '[')
          Pizquierda++;
-      if (cadena[k] == ')')
+      if (cadena[k] == ')' || cadena[k] == '}' || cadena[k] == ']')
          Pderecha++;
    }
    if (Pizquierda == Pderecha)
