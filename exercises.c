@@ -139,7 +139,7 @@ int parentesisBalanceados(char *cadena)
    int talla = strlen(cadena);
    for (int k = 0; k < talla; k++)
    {
-      if (cadena[k] != cadena[talla - (k + 1)])
+      if (cadena[k] == cadena[talla - (k + 1)])
          return 0;
    }
    return 1;
