@@ -137,9 +137,13 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 int parentesisBalanceados(char *cadena)
 {
    int talla = strlen(cadena);
+   int auxP = 0;
+   int auxF = 0;
    for (int k = 0; k < talla; k++)
    {
-      if (cadena[k] == cadena[talla - (k + 1)])
+      auxP = cadena[k];
+      auxF = cadena[talla - (k + 1)];
+      if ((auxP + 1) != auxF)
          return 0;
    }
    return 1;
