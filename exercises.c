@@ -136,15 +136,52 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 
 int parentesisBalanceados(char *cadena)
 {
-   int talla = strlen(cadena);
-   int auxP = 0;
-   int auxF = 0;
-   for (int k = 0; k < talla; k++)
+   char *pila = NULL;
+   int indice = -1;
+
+   for (int j = 0; cadena[j] != '\0'; j++)
    {
-      auxP = cadena[k];
-      auxF = cadena[talla - (k + 1)];
-      if ((auxP + 1) != auxF)
-         return 0;
+      char caracter = cadena[j];
+
+      if (caracter == '(' || caracter == '{' || caracter == '[')
+      {
+         indice++;
+         char *temporal = (char *)realloc(pila, (indice + 1) * sizeof(char));
+         if (!temporal)
+         {
+            free(pila);
+            return 0;
+         }
+
+         pila = temporal;
+         pila[indice] = caracter;
+      }
+      else if (caracter == ')' || caracter == '}' || caracter == ']')
+      {
+         if (indice == -1)
+         {
+            free(pila);
+            return 0;
+         }
+
+         char tope = pila[indice];
+         if ((caracter == ')' && tope != '(') ||
+             (caracter == ']' && tope != '[') ||
+             (caracter == '}' && tope != '{'))
+         {
+            free(pila);
+            return 0;
+         }
+         indice--;
+      }
    }
-   return 1;
+
+   int valido;
+   if (indice == -1)
+      valido = 1;
+   else
+      valido = 0;
+
+   free(pila);
+   return valido;
 }
