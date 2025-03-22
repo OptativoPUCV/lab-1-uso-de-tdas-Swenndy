@@ -148,9 +148,7 @@ int parentesisBalanceados(char *cadena)
          indice++;
          char *temporal = (char *)realloc(pila, (indice + 1) * sizeof(char));
          if (temporal == NULL)
-         {
             return EXIT_FAILURE;
-         }
 
          pila = temporal;
          pila[indice] = caracter;
